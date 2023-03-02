@@ -1,4 +1,5 @@
 import 'package:amitruck_interview/src/app.dart';
+import 'package:amitruck_interview/src/localization/string_hardcoded.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,6 @@ void main() async {
   // * Register error handlers. For more info, see:
   // * https://docs.flutter.dev/testing/errors
   registerErrorHandlers();
-  // * Initialize CartSyncService to start the listener
   // * Entry point of the app
   runApp(const MyApp());
 }
@@ -30,7 +30,7 @@ void registerErrorHandlers() {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: const Text('An error occurred'),
+        title: Text('An error occurred'.hardcoded),
       ),
       body: Center(child: Text(details.toString())),
     );
